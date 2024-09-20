@@ -1,0 +1,196 @@
+[
+  {
+    "ContainingType": "BackEnd.API.Controllers.ChrisController",
+    "Method": "AgregarData",
+    "RelativePath": "api/Chris/AgregarData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Lista",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd.API.Controllers.ChrisController",
+    "Method": "CreateUser",
+    "RelativePath": "api/Chris/CreateUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd.API.Controllers.ChrisController",
+    "Method": "CreateXML",
+    "RelativePath": "api/Chris/CreateXML",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "BackEnd.API.Controllers.CreateXmlRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd.API.Controllers.ChrisController",
+    "Method": "Delete",
+    "RelativePath": "api/Chris/DeleteData",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "xmlName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "conditions",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "confirmation",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd.API.Controllers.ChrisController",
+    "Method": "GetData",
+    "RelativePath": "api/Chris/GetData",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "xmlName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "atributes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "conditions",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd.API.Controllers.ChrisController",
+    "Method": "GetSomeDataJoin",
+    "RelativePath": "api/Chris/GetSomeDataJoin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "xmlName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "atributes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "conditions",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd.API.Controllers.ChrisController",
+    "Method": "Loginr",
+    "RelativePath": "api/Chris/Login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd.API.Controllers.ChrisController",
+    "Method": "UpdateData",
+    "RelativePath": "api/Chris/UpdateData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "BackEnd.API.Controllers.UpdateDataRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd.API.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BackEnd.API.WeatherForecast, BackEnd.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

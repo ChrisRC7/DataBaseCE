@@ -38,21 +38,10 @@
                     </span>
                   </div>
                 </div>
-
-                <!-- Email input -->
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <input type="text" id="form3Example2" class="form-control" placeholder="Email address" formControlName="email"/>
-                    <span class="form-text text-danger" *ngIf="campoNoValido('email')">
-                      This field is required
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Password input -->
+              
+                <!-- Password input -->
               <div class="form-outline mb-4">
-                <input type="password" id="form3Example3" class="form-control" placeholder="Password" formControlName="password"/>
+                <input type="password" id="form3Example3" class="form-control" placeholder="Contraseña" formControlName="password"/>
                 <span class="form-text text-danger" *ngIf="campoNoValido('password')">
                   This field is required
                 </span>
@@ -60,11 +49,107 @@
 
               <!-- Confirm input -->
               <div class="form-outline mb-4">
-                <input type="password" id="form3Example4" class="form-control" placeholder="Confirm password" formControlName="password2"/>
+                <input type="password" id="form3Example4" class="form-control" placeholder="Confirmar contraseña" formControlName="password2"/>
                 <span class="form-text text-danger" *ngIf="campoNoValido('password2')">
                   This field is required
                 </span>
               </div>
+
+              
+              <div class="col-md-6 mb-4"></div>
+                  <div class="form-outline">
+                    <input type="text" id="form3Example2" class="form-control" placeholder="Cedula" formControlName="Cedula"/>
+                    <span class="form-text text-danger" *ngIf="campoNoValido('Cedula')">
+                      This field is required
+                    </span>
+                  </div>
+
+                <div class="col-md-6 mb-4"></div>
+                  <div class="form-outline">
+                    <input type="text" id="form3Example2" class="form-control" placeholder="Nombre" formControlName="Nombre"/>
+                    <span class="form-text text-danger" *ngIf="campoNoValido('Nombre')">
+                      This field is required
+                    </span>
+                  </div>
+
+
+                <div class="col-md-6 mb-4"></div>
+                  <div class="form-outline">
+                    <input type="text" id="form3Example3" class="form-control" placeholder="Apellidos" formControlName="apellidos"/>
+                    <span class="form-text text-danger" *ngIf="campoNoValido('apellidos')">
+                      This field is required
+                    </span>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4"></div>
+                  <div class="form-outline">
+                    <input type="text" id="form3Example3" class="form-control" placeholder="Codigo de nutricionista" formControlName="Codigo de nutricionista"/>
+                    <span class="form-text text-danger" *ngIf="campoNoValido('Codigo de nutricionista')">
+                      This field is required
+                    </span>
+                  </div>
+
+                  <div class="col-md-6 mb-4"></div>
+                  <div class="form-outline">
+                    <input type="text" id="form3Example3" class="form-control" placeholder="Edad" formControlName="Edad"/>
+                    <span class="form-text text-danger" *ngIf="campoNoValido('Edad')">
+                      This field is required
+                    </span>
+                  </div>
+
+                  <div class="col-md-6 mb-4"></div>
+                  <div class="form-outline">
+                    <input type="text" id="form3Example3" class="form-control" placeholder="Fecha de nacimiento" formControlName="Fecha de nacimiento"/>
+                    <span class="form-text text-danger" *ngIf="campoNoValido('Fecha de nacimiento')">
+                      This field is required
+                    </span>
+                  </div>
+
+                  <div class="col-md-6 mb-4"></div>
+                  <div class="form-outline">
+                    <input type="text" id="form3Example3" class="form-control" placeholder="Peso" formControlName="Peso"/>
+                    <span class="form-text text-danger" *ngIf="campoNoValido('Peso')">
+                      This field is required
+                    </span>
+                  </div>
+
+                  <div class="col-md-6 mb-4"></div>
+                  <div class="form-outline">
+                    <input type="text" id="form3Example3" class="form-control" placeholder="IMC" formControlName="IMC"/>
+                    <span class="form-text text-danger" *ngIf="campoNoValido('IMC')">
+                      This field is required
+                    </span>
+                  </div>
+
+                  <div class="col-md-6 mb-4"></div>
+                  <div class="form-outline">
+                    <input type="text" id="form3Example3" class="form-control" placeholder="Dirección" formControlName="Dirección"/>
+                    <span class="form-text text-danger" *ngIf="campoNoValido('Dirección')">
+                      This field is required
+                    </span>
+                  </div>
+                  <div class="col-md-6 mb-4"></div>
+                  <div class="form-outline">
+                    <input type="text" id="form3Example3" class="form-control" placeholder="Número de tarjeta de crédito" formControlName="Número de tarjeta de crédito"/>
+                    <span class="form-text text-danger" *ngIf="campoNoValido('Número de tarjeta de crédito')">
+                      This field is required
+                    </span>
+                  </div>
+                  <div class="col-md-6 mb-4"></div>
+                  <div class="form-outline">
+                    <input type="text" id="form3Example3" class="form-control" placeholder="Tipo de cobro" formControlName="Tipo de cobro"/>
+                    <span class="form-text text-danger" *ngIf="campoNoValido('Tipo de cobro')">
+                      This field is required
+                    </span>
+                  </div>
+                  <div class="col-md-6 mb-4"></div>
+                  <div class="form-outline">
+                    <input type="text" id="form3Example3" class="form-control" placeholder="Correo electrónico" formControlName="Correo electrónico"/>
+                    <span class="form-text text-danger" *ngIf="campoNoValido('Correo electrónico')">
+                      This field is required
+                    </span>
+                  </div>
 
               <!-- Submit button -->
               <button type="submit" class="btn btn-primary btn-block mb-4">

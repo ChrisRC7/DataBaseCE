@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\chris\\OneDrive\\Escritorio\\Materia\\Datos\\DataBaseCE\\BackEnd\\BackEnd.API\\BackEnd.API\\BackEnd.API.csproj": {}
+    "C:\\Users\\ignac\\Desktop\\DataBaseCE\\BackEnd\\BackEnd.API\\BackEnd.API\\BackEnd.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\chris\\OneDrive\\Escritorio\\Materia\\Datos\\DataBaseCE\\BackEnd\\BackEnd.API\\BackEnd.API\\BackEnd.API.csproj": {
+    "C:\\Users\\ignac\\Desktop\\DataBaseCE\\BackEnd\\BackEnd.API\\BackEnd.API\\BackEnd.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chris\\OneDrive\\Escritorio\\Materia\\Datos\\DataBaseCE\\BackEnd\\BackEnd.API\\BackEnd.API\\BackEnd.API.csproj",
+        "projectUniqueName": "C:\\Users\\ignac\\Desktop\\DataBaseCE\\BackEnd\\BackEnd.API\\BackEnd.API\\BackEnd.API.csproj",
         "projectName": "BackEnd.API",
-        "projectPath": "C:\\Users\\chris\\OneDrive\\Escritorio\\Materia\\Datos\\DataBaseCE\\BackEnd\\BackEnd.API\\BackEnd.API\\BackEnd.API.csproj",
-        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chris\\OneDrive\\Escritorio\\Materia\\Datos\\DataBaseCE\\BackEnd\\BackEnd.API\\BackEnd.API\\obj\\",
+        "projectPath": "C:\\Users\\ignac\\Desktop\\DataBaseCE\\BackEnd\\BackEnd.API\\BackEnd.API\\BackEnd.API.csproj",
+        "packagesPath": "C:\\Users\\ignac\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ignac\\Desktop\\DataBaseCE\\BackEnd\\BackEnd.API\\BackEnd.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ignac\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -35,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -83,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
