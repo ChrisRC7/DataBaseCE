@@ -5,10 +5,8 @@
         <a href="/admin" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
           <span class="fs-5 fw-semibold">CE DataBase</span>
         </a>
-  
         <!-- Lista de elementos del SideBar -->
         <ul class="list-unstyled ps-0">
-  
           <li class="mb-1">
             <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
               data-bs-target="#account-collapse" aria-expanded="false">
@@ -20,24 +18,17 @@
               </ul>
             </div>
           </li>
-  
           <button type="submit" class="btn btn-primary" (click)="submit()">Confirmar</button>
-  
         </ul>
-  
       </div>
     </div>
-  
     <!-- Page content -->
     <div id="content" class="col-8">
-  
       <!-- Navegation bar, aquí se colocan los botones para mostrar
           los formularios -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-  
           <button type="submit" class="btn btn-primary" (click)="createCardChange()">Agregar</button>
-  
           <button type="button" id="sidebarCollapse" class="btn btn-info" (click)="selectCardChange()">
             <i class="fas fa-align-left"></i>
             <span>Buscar</span>
@@ -57,6 +48,11 @@
             <i class="fas fa-align-left"></i>
             <span>Actualizar</span>
           </button>
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info" (click)="calculateCardChange()">
+                <i class="fas fa-align-left"></i>
+                <span>Cálculos</span>
+            </button>
         </div>
       </nav>
   
@@ -143,11 +139,6 @@
                       formControlName="atributte3">
                     <label for="floatingAttribute3">Hierro (mg)</label>
                   </div>
-  
-  
-  
-  
-  
   
   
   
@@ -267,6 +258,39 @@
               </div>
             </div>
             <!-- END INSERT XML STORE Form -->
+             <!-- CALCULATIONS Form -->
+             <div class="card animate__animated animate__zoomIn" *ngIf="calculateCardStatus">
+                <div class="card-body">
+                  <h5 class="card-title">Cálculos</h5>
+              
+                  <form class="row g-3" autocomplete="off" [formGroup]="calculateForm">
+                    
+                    <!-- Input numérico con label -->
+                    <div class="col-md-12">
+                      <div class="form-floating">
+                        <input type="number" class="form-control" id="floatingNumberInput" placeholder="Ingrese un número"
+                        formControlName="numericInput">
+                        <label for="floatingNumberInput">Ingrese un número</label>
+                      </div>
+                    </div>
+              
+                    <!-- Botones para los cálculos -->
+                    <div class="col-md-12 text-center">
+                      <button type="button" class="btn btn-primary m-2" (click)="calculate('semanal')">Cálculo Semanal</button>
+                      <button type="button" class="btn btn-secondary m-2" (click)="calculate('mensual')">Cálculo Mensual</button>
+                      <button type="button" class="btn btn-success m-2" (click)="calculate('anual')">Cálculo Anual</button>
+                    </div>
+                    
+                  </form>
+              
+                  <!-- Mostrar el resultado debajo de los botones -->
+                  <div class="col-md-12 text-center mt-3">
+                    <p *ngIf="resultadoTexto">Monto: ${{ resultadoTexto }}</p>
+                  </div>
+                </div>
+              </div>              
+            <!-- END CALCULATIONS Form -->
+            
   
             <!-- DELETE XML STORE Form -->
             <div class="card animate__animated animate__zoomIn" *ngIf="deleteCardStatus">

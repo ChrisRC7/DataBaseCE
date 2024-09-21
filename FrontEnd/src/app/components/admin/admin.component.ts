@@ -17,6 +17,9 @@ export class AdminComponent implements OnInit {
   insertCardStatus: boolean = false;
   deleteCardStatus: boolean = false;
   updateCardStatus: boolean = false;
+  calculateCardStatus: boolean = false;
+  resultadoTexto: string | null = null;  // Variable para almacenar el resultado
+
 
   datosXml: Datos = [];
   attrList: string[] = [];
@@ -25,6 +28,8 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
 
   }
+
+
 
   /**
    * This is a constructor function that takes in several instances of FormBuilder and XmlmanagService
@@ -50,7 +55,15 @@ export class AdminComponent implements OnInit {
    */
   constructor(private createF: FormBuilder, private selectF: FormBuilder, private selectJoinF: FormBuilder,
     private insertF: FormBuilder, private deleteF: FormBuilder, private updateF: FormBuilder,
-    private Xml: XmlmanagService) { }
+    private Xml: XmlmanagService) 
+    {     
+    this.calculateForm = this.createF.group({
+      numericInput: ['', [Validators.required, Validators.pattern('^[0-9]+$')]] // Solo números positivos
+    });
+
+    }
+
+
 
   //Forms
   /* `createForm` is a property of the `HomeComponent` class that is being initialized with a new
@@ -117,6 +130,10 @@ export class AdminComponent implements OnInit {
     update: [''],
     set: [''],
     where: ['']
+  })
+
+  calculateForm: FormGroup = this.updateF.group({
+    numericInput: ['']
   })
 
   /**
@@ -321,9 +338,50 @@ export class AdminComponent implements OnInit {
     this.insertForm.markAllAsTouched();
 
     if (this.insertForm.value.insertInto != "" && this.insertForm.value.values != "") {
-      this.addData(this.insertForm.value.insertInto, this.insertForm.value.values)
+      this.addData(this.insertForm.value.insertInto, this.insertForm.value.values);
+      
+    }
+    this.insertForm.value.values.setValue("hola");
+  }
+
+  calculate(tipo: string) {
+    // Usar encadenamiento opcional para evitar el error si el control no existe
+    const valor = this.calculateForm.get('numericInput')?.value;
+  
+    // Verificar si el valor es inválido o si no es un número
+    if (!valor || isNaN(valor)) {
+      alert("Por favor, ingrese un número válido.");
+      return;
+    }
+  
+    let resultado: number | undefined;
+    const dolar = 1; // 1 dólar
+  
+    // Realizar el cálculo según el tipo seleccionado
+    switch (tipo) {
+      case 'semanal':
+        resultado = valor * dolar; // Cálculo semanal sin descuento
+        break;
+      case 'mensual':
+        resultado = (valor * dolar) * 0.95; // Cálculo mensual con 5% de descuento
+        break;
+      case 'anual':
+        resultado = (valor * dolar) * 0.90; // Cálculo anual con 10% de descuento
+        break;
+    }
+  
+    // Asegurarse de que el resultado no sea undefined antes de aplicar toFixed
+    if (resultado !== undefined) {
+      this.resultadoTexto = resultado.toFixed(2);  // Guardar el resultado formateado a 2 decimales
+      console.log(`Resultado del cálculo ${tipo}:`, resultado);
+    } else {
+      this.resultadoTexto = null;
+      console.error('Error: No se pudo calcular el resultado.');
     }
   }
+  
+
+  
 
 
   /**
@@ -419,6 +477,11 @@ export class AdminComponent implements OnInit {
   updateCardChange() {
     this.updateCardStatus = !this.updateCardStatus;
     console.log("updateCardStatus: ", this.updateCardStatus);
+  }
+
+  calculateCardChange() {
+    this.calculateCardStatus = !this.calculateCardStatus;
+    console.log("calculateCardStatus: ", this.calculateCardStatus);
   }
 
 }
