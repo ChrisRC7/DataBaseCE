@@ -9,6 +9,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminComponent } from './components/admin/admin.component';
+import { NutricionistaComponent } from './components/nutricionista/nutricionista.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ChrisListComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    AdminComponent,
+    NutricionistaComponent
   ],
   imports: [
     BrowserModule,

@@ -4,13 +4,13 @@ import { Datos } from 'src/app/models/chris.model';
 import { XmlmanagService } from 'src/app/service/xmlmanag.service';
 
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.css']
+  selector: 'app-nutricionista',
+  templateUrl: './nutricionista.component.html',
+  styleUrls: ['./nutricionista.component.css']
 })
 /* The HomeComponent class initializes boolean variables and arrays for card status, data, and
 attribute lists in TypeScript. */
-export class AdminComponent implements OnInit {
+export class NutricionistaComponent implements OnInit {
   // CARD STATUS
   createCardStatus: boolean = true;
   selectCardStatus: boolean = false;

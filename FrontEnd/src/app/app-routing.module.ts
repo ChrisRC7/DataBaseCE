@@ -4,6 +4,8 @@ import { ChrisListComponent } from './components/pruebaChris/chris-list/chris-li
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { NutricionistaComponent } from './components/nutricionista/nutricionista.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,14 @@ const routes: Routes = [
   {
     path: 'chrispage',
     component: ChrisListComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
+  },
+  {
+    path: 'nutricionista',
+    component: NutricionistaComponent
   },
   {
     path: '**',
